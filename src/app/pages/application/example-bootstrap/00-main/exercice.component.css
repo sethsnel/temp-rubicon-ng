@@ -27,11 +27,3 @@
 .nga-card-rotate a {
   text-decoration: none;
 }
-
-.nga-card-rotate:not(.manual-flip):hover .card,
-.nga-card-rotate.hover.manual-flip .card {
-  -webkit-transform: rotateY(180deg);
-  -moz-transform: rotateY(180deg);
-  -o-transform: rotateY(180deg);
-  transform: rotateY(180deg);
-}

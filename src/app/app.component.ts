@@ -15,8 +15,8 @@ import { DOCUMENT, isPlatformBrowser } from '@angular/common';
 
 export class AppComponent implements OnInit {
   title = 'angular-routing';
-  footerUrl = 'https://www.ganatan.com';
-  footerLink = 'www.ganatan.com';
+  footerUrl = 'https://www.rubicon.nl';
+  footerLink = 'www.rubicon.nl';
 
   constructor(
     @Inject(DOCUMENT) private document: Document,
@@ -24,8 +24,9 @@ export class AppComponent implements OnInit {
   }
 
   ngOnInit(): void {
-
+    console.info('this runs on the server and browser');
     if (isPlatformBrowser(this.platformId)) {
+      console.info('this runs on the browser');
       const navMain = this.document.getElementById('navbarCollapse');
       if (navMain) {
         navMain.onclick = function onClick() {
@@ -35,6 +36,8 @@ export class AppComponent implements OnInit {
         }
       }
     }
+    else {
+      console.info('this runs on the server');
+    }
   }
-
-}  
+}

@@ -14,6 +14,7 @@ export class SongService {
    }
 
   getSongs(year: number): Song[] {
+    console.info('Server or browser?');
     this.song = SONGS[year - 1].items;
     
     return this.song;
